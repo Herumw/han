@@ -1,0 +1,492 @@
+Following will output the evaluation of the model:
+Following will output the evaluation of the model:
+Following will output the evaluation of the model:
+Following will output the evaluation of the model:
+Epoch:1, compute loss cost:9.4346s, train loss:978.7997, val loss:926.4395, test loss:4825.5547
+Evaluate cost:6.1745s, hr:0.3285, ndcg:0.1995
+Epoch:2, compute loss cost:4.4995s, train loss:902.8813, val loss:919.5813, test loss:4788.8809
+Evaluate cost:4.4482s, hr:0.3311, ndcg:0.2016
+Epoch:3, compute loss cost:4.5418s, train loss:887.8757, val loss:917.1348, test loss:4776.4639
+Evaluate cost:4.4605s, hr:0.3335, ndcg:0.2032
+Epoch:4, compute loss cost:4.5147s, train loss:873.8594, val loss:915.4100, test loss:4767.1602
+Evaluate cost:4.6408s, hr:0.3338, ndcg:0.2033
+Epoch:5, compute loss cost:4.5894s, train loss:861.8588, val loss:914.4800, test loss:4761.4619
+Evaluate cost:4.4683s, hr:0.3356, ndcg:0.2043
+Epoch:6, compute loss cost:4.5259s, train loss:852.9551, val loss:913.7164, test loss:4756.2988
+Evaluate cost:4.4821s, hr:0.3364, ndcg:0.2041
+Epoch:7, compute loss cost:4.5260s, train loss:844.0985, val loss:912.7932, test loss:4753.1401
+Evaluate cost:4.4360s, hr:0.3364, ndcg:0.2048
+Epoch:8, compute loss cost:4.5170s, train loss:832.0353, val loss:913.2073, test loss:4749.4443
+Evaluate cost:4.4282s, hr:0.3347, ndcg:0.2044
+Epoch:9, compute loss cost:4.5549s, train loss:823.2020, val loss:912.8416, test loss:4751.5952
+Evaluate cost:4.4343s, hr:0.3350, ndcg:0.2048
+Epoch:10, compute loss cost:4.5379s, train loss:815.0281, val loss:911.8245, test loss:4746.9028
+Evaluate cost:4.4169s, hr:0.3357, ndcg:0.2049
+Epoch:11, compute loss cost:4.5110s, train loss:806.4246, val loss:910.7323, test loss:4742.3735
+Evaluate cost:4.4212s, hr:0.3366, ndcg:0.2058
+Epoch:12, compute loss cost:4.5170s, train loss:799.5513, val loss:910.8242, test loss:4741.6270
+Evaluate cost:4.4108s, hr:0.3361, ndcg:0.2058
+Epoch:13, compute loss cost:4.5664s, train loss:791.6876, val loss:910.5286, test loss:4739.2378
+Evaluate cost:4.4277s, hr:0.3364, ndcg:0.2057
+Epoch:14, compute loss cost:4.5324s, train loss:783.2272, val loss:910.8059, test loss:4742.0688
+Evaluate cost:4.4776s, hr:0.3378, ndcg:0.2064
+Epoch:15, compute loss cost:4.5284s, train loss:776.6598, val loss:910.1411, test loss:4739.0693
+Evaluate cost:4.4153s, hr:0.3372, ndcg:0.2057
+Epoch:16, compute loss cost:4.5155s, train loss:768.1296, val loss:909.1602, test loss:4739.4917
+Evaluate cost:4.5097s, hr:0.3351, ndcg:0.2053
+Epoch:17, compute loss cost:4.5554s, train loss:761.2521, val loss:909.4354, test loss:4743.9141
+Evaluate cost:4.6015s, hr:0.3336, ndcg:0.2044
+Epoch:18, compute loss cost:4.5399s, train loss:754.1110, val loss:909.8273, test loss:4746.4614
+Evaluate cost:4.4918s, hr:0.3353, ndcg:0.2045
+Epoch:19, compute loss cost:4.5529s, train loss:747.8254, val loss:909.5734, test loss:4741.8994
+Evaluate cost:4.4349s, hr:0.3358, ndcg:0.2054
+Epoch:20, compute loss cost:4.5384s, train loss:740.3695, val loss:909.9005, test loss:4742.0859
+Evaluate cost:4.4373s, hr:0.3346, ndcg:0.2052
+Epoch:21, compute loss cost:4.5389s, train loss:731.8250, val loss:911.1327, test loss:4751.2939
+Evaluate cost:4.4500s, hr:0.3330, ndcg:0.2041
+Epoch:22, compute loss cost:4.5414s, train loss:726.3358, val loss:910.0925, test loss:4744.6025
+Evaluate cost:4.4568s, hr:0.3349, ndcg:0.2047
+Epoch:23, compute loss cost:4.5404s, train loss:719.3106, val loss:910.9385, test loss:4747.8418
+Evaluate cost:4.4077s, hr:0.3348, ndcg:0.2045
+Epoch:24, compute loss cost:4.5199s, train loss:716.4969, val loss:911.4033, test loss:4750.2354
+Evaluate cost:4.6291s, hr:0.3325, ndcg:0.2037
+Epoch:25, compute loss cost:4.5496s, train loss:705.2925, val loss:911.6119, test loss:4752.6494
+Evaluate cost:4.5064s, hr:0.3327, ndcg:0.2032
+Epoch:26, compute loss cost:4.6586s, train loss:700.9151, val loss:910.4456, test loss:4756.2061
+Evaluate cost:4.4844s, hr:0.3338, ndcg:0.2030
+Epoch:27, compute loss cost:4.5105s, train loss:694.4768, val loss:911.6776, test loss:4762.8911
+Evaluate cost:4.4382s, hr:0.3331, ndcg:0.2022
+Epoch:28, compute loss cost:4.5219s, train loss:690.8881, val loss:912.3296, test loss:4767.4507
+Evaluate cost:4.4303s, hr:0.3333, ndcg:0.2027
+Epoch:29, compute loss cost:4.5434s, train loss:684.0427, val loss:912.2469, test loss:4767.6416
+Evaluate cost:4.4354s, hr:0.3332, ndcg:0.2026
+Epoch:30, compute loss cost:4.5130s, train loss:678.3105, val loss:912.6895, test loss:4771.9580
+Evaluate cost:4.4268s, hr:0.3314, ndcg:0.2016
+Epoch:31, compute loss cost:4.5324s, train loss:670.7642, val loss:913.2444, test loss:4776.8154
+Evaluate cost:4.4575s, hr:0.3316, ndcg:0.2020
+Epoch:32, compute loss cost:4.5015s, train loss:667.2217, val loss:913.8047, test loss:4780.7939
+Evaluate cost:4.4455s, hr:0.3318, ndcg:0.2020
+Epoch:33, compute loss cost:4.5485s, train loss:659.5404, val loss:914.0626, test loss:4784.3398
+Evaluate cost:4.4490s, hr:0.3309, ndcg:0.2016
+Epoch:34, compute loss cost:4.5419s, train loss:653.4955, val loss:916.1354, test loss:4792.5342
+Evaluate cost:4.4148s, hr:0.3311, ndcg:0.2020
+Epoch:35, compute loss cost:4.5444s, train loss:650.5815, val loss:917.0114, test loss:4799.4922
+Evaluate cost:4.4232s, hr:0.3324, ndcg:0.2021
+Epoch:36, compute loss cost:4.5439s, train loss:643.1946, val loss:916.9819, test loss:4797.2275
+Evaluate cost:4.4663s, hr:0.3314, ndcg:0.2018
+Epoch:37, compute loss cost:4.5000s, train loss:638.5606, val loss:916.9881, test loss:4799.4790
+Evaluate cost:4.4486s, hr:0.3334, ndcg:0.2024
+Epoch:38, compute loss cost:4.5295s, train loss:631.9557, val loss:916.8552, test loss:4801.5366
+Evaluate cost:4.4307s, hr:0.3313, ndcg:0.2018
+Epoch:39, compute loss cost:4.5124s, train loss:628.6747, val loss:918.4689, test loss:4812.9292
+Evaluate cost:4.4259s, hr:0.3299, ndcg:0.2015
+Epoch:40, compute loss cost:4.5310s, train loss:624.3098, val loss:918.7909, test loss:4814.1147
+Evaluate cost:4.5934s, hr:0.3318, ndcg:0.2013
+Epoch:41, compute loss cost:4.5205s, train loss:618.8882, val loss:919.2454, test loss:4816.0903
+Evaluate cost:4.4067s, hr:0.3297, ndcg:0.2013
+Epoch:42, compute loss cost:4.5189s, train loss:609.8364, val loss:920.2943, test loss:4818.0889
+Evaluate cost:4.4344s, hr:0.3298, ndcg:0.2009
+Epoch:43, compute loss cost:4.5095s, train loss:606.4705, val loss:921.7655, test loss:4828.3091
+Evaluate cost:4.4318s, hr:0.3294, ndcg:0.2004
+Epoch:44, compute loss cost:4.5180s, train loss:601.4054, val loss:922.4882, test loss:4831.4048
+Evaluate cost:4.4357s, hr:0.3291, ndcg:0.2001
+Epoch:45, compute loss cost:4.5145s, train loss:597.3912, val loss:923.4677, test loss:4837.9160
+Evaluate cost:4.4278s, hr:0.3283, ndcg:0.2000
+Epoch:46, compute loss cost:4.5050s, train loss:593.0935, val loss:924.6648, test loss:4845.5996
+Evaluate cost:4.4367s, hr:0.3293, ndcg:0.2000
+Epoch:47, compute loss cost:4.5095s, train loss:586.8104, val loss:924.9492, test loss:4850.3291
+Evaluate cost:4.4227s, hr:0.3276, ndcg:0.1998
+Epoch:48, compute loss cost:4.5508s, train loss:582.8838, val loss:926.3260, test loss:4860.7100
+Evaluate cost:4.4423s, hr:0.3279, ndcg:0.2000
+Epoch:49, compute loss cost:4.5309s, train loss:577.7546, val loss:926.9761, test loss:4861.4263
+Evaluate cost:4.4184s, hr:0.3272, ndcg:0.1991
+Epoch:50, compute loss cost:4.6811s, train loss:572.5259, val loss:926.0524, test loss:4859.6763
+Evaluate cost:4.5503s, hr:0.3267, ndcg:0.1997
+Epoch:51, compute loss cost:4.5295s, train loss:569.0406, val loss:926.6544, test loss:4869.4678
+Evaluate cost:4.4885s, hr:0.3287, ndcg:0.2000
+Epoch:52, compute loss cost:4.4971s, train loss:564.1352, val loss:927.2263, test loss:4876.0508
+Evaluate cost:4.6100s, hr:0.3276, ndcg:0.1998
+Epoch:53, compute loss cost:4.5638s, train loss:561.0382, val loss:928.4674, test loss:4882.6675
+Evaluate cost:4.5303s, hr:0.3292, ndcg:0.1999
+Epoch:54, compute loss cost:4.5260s, train loss:555.8126, val loss:929.3253, test loss:4888.1416
+Evaluate cost:4.4429s, hr:0.3277, ndcg:0.1996
+Epoch:55, compute loss cost:4.5269s, train loss:553.2047, val loss:928.0258, test loss:4890.5459
+Evaluate cost:4.4554s, hr:0.3271, ndcg:0.1988
+Epoch:56, compute loss cost:4.5174s, train loss:547.0786, val loss:929.3586, test loss:4901.2139
+Evaluate cost:4.4518s, hr:0.3266, ndcg:0.1984
+Epoch:57, compute loss cost:4.5170s, train loss:542.9417, val loss:931.3560, test loss:4916.0552
+Evaluate cost:4.4169s, hr:0.3248, ndcg:0.1977
+Epoch:58, compute loss cost:4.5251s, train loss:538.3426, val loss:930.9124, test loss:4910.5767
+Evaluate cost:4.4470s, hr:0.3262, ndcg:0.1982
+Epoch:59, compute loss cost:4.4940s, train loss:536.5473, val loss:933.0407, test loss:4919.7764
+Evaluate cost:4.4288s, hr:0.3242, ndcg:0.1981
+Epoch:60, compute loss cost:4.5334s, train loss:530.5752, val loss:935.4090, test loss:4930.3140
+Evaluate cost:4.4277s, hr:0.3227, ndcg:0.1969
+Epoch:61, compute loss cost:4.5688s, train loss:524.5632, val loss:935.2931, test loss:4929.3008
+Evaluate cost:4.4419s, hr:0.3215, ndcg:0.1966
+Epoch:62, compute loss cost:4.6007s, train loss:523.3648, val loss:937.0438, test loss:4939.2783
+Evaluate cost:4.4572s, hr:0.3215, ndcg:0.1969
+Epoch:63, compute loss cost:4.5284s, train loss:518.0399, val loss:938.4036, test loss:4944.7920
+Evaluate cost:4.5925s, hr:0.3226, ndcg:0.1971
+Epoch:64, compute loss cost:4.5434s, train loss:516.2931, val loss:938.4927, test loss:4945.4141
+Evaluate cost:4.4309s, hr:0.3225, ndcg:0.1966
+Epoch:65, compute loss cost:4.5015s, train loss:511.4960, val loss:941.5765, test loss:4968.3252
+Evaluate cost:4.4412s, hr:0.3225, ndcg:0.1966
+Epoch:66, compute loss cost:4.5360s, train loss:507.7792, val loss:942.2002, test loss:4965.2568
+Evaluate cost:4.4391s, hr:0.3230, ndcg:0.1965
+Epoch:67, compute loss cost:4.5210s, train loss:508.0738, val loss:943.2330, test loss:4972.7627
+Evaluate cost:4.4217s, hr:0.3229, ndcg:0.1966
+Epoch:68, compute loss cost:4.5479s, train loss:501.7648, val loss:945.3871, test loss:4983.8022
+Evaluate cost:4.5094s, hr:0.3217, ndcg:0.1954
+Epoch:69, compute loss cost:4.5639s, train loss:496.0583, val loss:946.1564, test loss:4988.5410
+Evaluate cost:4.5242s, hr:0.3228, ndcg:0.1961
+Epoch:70, compute loss cost:5.1683s, train loss:494.4214, val loss:946.0687, test loss:4995.2583
+Evaluate cost:4.4791s, hr:0.3218, ndcg:0.1954
+Epoch:71, compute loss cost:4.5693s, train loss:492.0050, val loss:947.2456, test loss:5003.4639
+Evaluate cost:4.6254s, hr:0.3207, ndcg:0.1948
+Epoch:72, compute loss cost:5.0063s, train loss:486.0562, val loss:949.0731, test loss:5013.4956
+Evaluate cost:4.4818s, hr:0.3200, ndcg:0.1947
+Epoch:73, compute loss cost:5.0117s, train loss:484.0513, val loss:950.2111, test loss:5013.5298
+Evaluate cost:9.1232s, hr:0.3182, ndcg:0.1939
+Epoch:74, compute loss cost:4.5693s, train loss:481.9176, val loss:952.6570, test loss:5024.4390
+Evaluate cost:4.4561s, hr:0.3182, ndcg:0.1933
+Epoch:75, compute loss cost:4.5314s, train loss:478.5265, val loss:955.0249, test loss:5039.1875
+Evaluate cost:4.4311s, hr:0.3193, ndcg:0.1941
+Epoch:76, compute loss cost:4.5438s, train loss:472.9388, val loss:954.6604, test loss:5038.8408
+Evaluate cost:4.4446s, hr:0.3188, ndcg:0.1941
+Epoch:77, compute loss cost:4.5464s, train loss:468.5974, val loss:955.6447, test loss:5048.1299
+Evaluate cost:4.4187s, hr:0.3189, ndcg:0.1938
+Epoch:78, compute loss cost:4.5523s, train loss:466.9741, val loss:956.2831, test loss:5052.8516
+Evaluate cost:4.4459s, hr:0.3186, ndcg:0.1939
+Epoch:79, compute loss cost:4.5569s, train loss:462.5865, val loss:959.2471, test loss:5066.6348
+Evaluate cost:4.4523s, hr:0.3190, ndcg:0.1942
+Epoch:80, compute loss cost:4.5159s, train loss:459.2565, val loss:958.6542, test loss:5063.8984
+Evaluate cost:4.4467s, hr:0.3189, ndcg:0.1938
+Epoch:81, compute loss cost:4.5459s, train loss:455.6711, val loss:960.1290, test loss:5072.3770
+Evaluate cost:5.5743s, hr:0.3189, ndcg:0.1936
+Epoch:82, compute loss cost:4.5534s, train loss:453.3934, val loss:961.2006, test loss:5072.3828
+Evaluate cost:4.4493s, hr:0.3178, ndcg:0.1935
+Epoch:83, compute loss cost:4.5200s, train loss:447.8036, val loss:964.1509, test loss:5093.1548
+Evaluate cost:4.6168s, hr:0.3177, ndcg:0.1936
+Epoch:84, compute loss cost:4.5234s, train loss:447.6324, val loss:963.4953, test loss:5090.7153
+Evaluate cost:4.4424s, hr:0.3175, ndcg:0.1935
+Epoch:85, compute loss cost:4.6196s, train loss:443.4666, val loss:964.3995, test loss:5101.9985
+Evaluate cost:4.4546s, hr:0.3172, ndcg:0.1932
+Epoch:86, compute loss cost:4.5723s, train loss:440.0125, val loss:966.2537, test loss:5111.9897
+Evaluate cost:4.4505s, hr:0.3160, ndcg:0.1927
+Epoch:87, compute loss cost:4.5394s, train loss:438.1148, val loss:966.8855, test loss:5115.8203
+Evaluate cost:4.5672s, hr:0.3157, ndcg:0.1927
+Epoch:88, compute loss cost:4.5992s, train loss:434.2007, val loss:968.1155, test loss:5125.3599
+Evaluate cost:4.4458s, hr:0.3151, ndcg:0.1927
+Epoch:89, compute loss cost:4.4995s, train loss:432.9728, val loss:969.3759, test loss:5129.7471
+Evaluate cost:4.4368s, hr:0.3150, ndcg:0.1921
+Epoch:90, compute loss cost:4.5488s, train loss:429.0185, val loss:970.3687, test loss:5137.8965
+Evaluate cost:4.4908s, hr:0.3154, ndcg:0.1919
+Epoch:91, compute loss cost:4.5185s, train loss:424.5520, val loss:971.9455, test loss:5148.5215
+Evaluate cost:4.4403s, hr:0.3121, ndcg:0.1910
+Epoch:92, compute loss cost:4.5339s, train loss:421.1740, val loss:973.9260, test loss:5159.9473
+Evaluate cost:4.4272s, hr:0.3139, ndcg:0.1912
+Epoch:93, compute loss cost:4.5204s, train loss:418.9777, val loss:973.6622, test loss:5155.7075
+Evaluate cost:4.6397s, hr:0.3140, ndcg:0.1911
+Epoch:94, compute loss cost:4.5713s, train loss:415.8074, val loss:975.0154, test loss:5164.9697
+Evaluate cost:4.4468s, hr:0.3135, ndcg:0.1908
+Epoch:95, compute loss cost:4.5215s, train loss:415.2278, val loss:977.6262, test loss:5183.8262
+Evaluate cost:4.4413s, hr:0.3125, ndcg:0.1902
+Epoch:96, compute loss cost:4.5090s, train loss:411.5969, val loss:978.4154, test loss:5188.9873
+Evaluate cost:4.4298s, hr:0.3139, ndcg:0.1909
+Epoch:97, compute loss cost:4.5065s, train loss:409.3762, val loss:980.0099, test loss:5197.8711
+Evaluate cost:4.4277s, hr:0.3121, ndcg:0.1903
+Epoch:98, compute loss cost:4.5459s, train loss:408.3801, val loss:981.5823, test loss:5208.0952
+Evaluate cost:4.4294s, hr:0.3116, ndcg:0.1898
+Epoch:99, compute loss cost:4.5389s, train loss:404.3650, val loss:983.3750, test loss:5216.7915
+Evaluate cost:4.4502s, hr:0.3116, ndcg:0.1895
+Epoch:100, compute loss cost:4.5334s, train loss:401.8219, val loss:982.8552, test loss:5215.7188
+Evaluate cost:4.4168s, hr:0.3127, ndcg:0.1898
+Epoch:101, compute loss cost:4.5015s, train loss:399.4803, val loss:984.7163, test loss:5226.4204
+Evaluate cost:4.4432s, hr:0.3123, ndcg:0.1898
+Epoch:102, compute loss cost:4.4970s, train loss:394.6700, val loss:986.5936, test loss:5233.3315
+Evaluate cost:4.4437s, hr:0.3116, ndcg:0.1894
+Epoch:103, compute loss cost:4.5069s, train loss:394.8406, val loss:987.8404, test loss:5244.6143
+Evaluate cost:4.4322s, hr:0.3119, ndcg:0.1894
+Epoch:104, compute loss cost:4.5100s, train loss:391.3969, val loss:988.0457, test loss:5242.8340
+Evaluate cost:4.4462s, hr:0.3120, ndcg:0.1886
+Epoch:105, compute loss cost:4.5139s, train loss:388.9958, val loss:990.7250, test loss:5257.6694
+Evaluate cost:4.4381s, hr:0.3126, ndcg:0.1886
+Epoch:106, compute loss cost:4.5264s, train loss:387.1524, val loss:991.9216, test loss:5264.1543
+Evaluate cost:4.6043s, hr:0.3100, ndcg:0.1873
+Epoch:107, compute loss cost:4.5359s, train loss:382.0103, val loss:993.6387, test loss:5272.1665
+Evaluate cost:4.4863s, hr:0.3086, ndcg:0.1873
+Epoch:108, compute loss cost:4.5280s, train loss:383.2472, val loss:996.2988, test loss:5284.0806
+Evaluate cost:4.4273s, hr:0.3088, ndcg:0.1875
+Epoch:109, compute loss cost:4.5324s, train loss:379.0139, val loss:996.8217, test loss:5286.3018
+Evaluate cost:4.4469s, hr:0.3079, ndcg:0.1867
+Epoch:110, compute loss cost:4.6163s, train loss:376.2008, val loss:997.6021, test loss:5290.7148
+Evaluate cost:4.4656s, hr:0.3084, ndcg:0.1872
+Epoch:111, compute loss cost:4.5244s, train loss:373.6892, val loss:998.7765, test loss:5296.2993
+Evaluate cost:4.4356s, hr:0.3092, ndcg:0.1874
+Epoch:112, compute loss cost:4.5309s, train loss:372.9579, val loss:1000.9976, test loss:5309.8813
+Evaluate cost:4.4353s, hr:0.3103, ndcg:0.1876
+Epoch:113, compute loss cost:4.5578s, train loss:368.3137, val loss:1003.5273, test loss:5323.2495
+Evaluate cost:4.4561s, hr:0.3090, ndcg:0.1871
+Epoch:114, compute loss cost:4.5310s, train loss:365.9038, val loss:1000.5018, test loss:5310.3086
+Evaluate cost:4.4358s, hr:0.3083, ndcg:0.1868
+Epoch:115, compute loss cost:4.5455s, train loss:363.5480, val loss:1003.0527, test loss:5325.4258
+Evaluate cost:4.4493s, hr:0.3076, ndcg:0.1865
+Epoch:116, compute loss cost:4.5320s, train loss:363.2445, val loss:1004.5363, test loss:5338.2090
+Evaluate cost:4.4393s, hr:0.3076, ndcg:0.1861
+Epoch:117, compute loss cost:4.5214s, train loss:359.5087, val loss:1006.6290, test loss:5346.7373
+Evaluate cost:4.4367s, hr:0.3067, ndcg:0.1856
+Epoch:118, compute loss cost:4.5469s, train loss:357.3210, val loss:1007.4107, test loss:5352.8086
+Evaluate cost:4.4607s, hr:0.3074, ndcg:0.1858
+Epoch:119, compute loss cost:4.4875s, train loss:356.0783, val loss:1008.5968, test loss:5360.7773
+Evaluate cost:4.4315s, hr:0.3058, ndcg:0.1857
+Epoch:120, compute loss cost:4.5464s, train loss:353.5697, val loss:1012.0831, test loss:5380.4033
+Evaluate cost:4.4253s, hr:0.3052, ndcg:0.1850
+Epoch:121, compute loss cost:4.5389s, train loss:351.7292, val loss:1011.2595, test loss:5373.5986
+Evaluate cost:4.4408s, hr:0.3048, ndcg:0.1849
+Epoch:122, compute loss cost:4.5244s, train loss:351.6106, val loss:1015.3538, test loss:5397.9487
+Evaluate cost:4.4326s, hr:0.3029, ndcg:0.1839
+Epoch:123, compute loss cost:4.5468s, train loss:348.6429, val loss:1013.6030, test loss:5387.4634
+Evaluate cost:4.4388s, hr:0.3032, ndcg:0.1842
+Epoch:124, compute loss cost:4.5558s, train loss:345.2048, val loss:1015.5238, test loss:5402.6099
+Evaluate cost:4.4404s, hr:0.3030, ndcg:0.1840
+Epoch:125, compute loss cost:4.5658s, train loss:343.0372, val loss:1016.1124, test loss:5410.2402
+Evaluate cost:4.4330s, hr:0.3037, ndcg:0.1838
+Epoch:126, compute loss cost:4.5184s, train loss:341.5778, val loss:1018.7971, test loss:5419.3838
+Evaluate cost:4.4378s, hr:0.3041, ndcg:0.1843
+Epoch:127, compute loss cost:4.5400s, train loss:339.1624, val loss:1019.3139, test loss:5421.5913
+Evaluate cost:4.4287s, hr:0.3043, ndcg:0.1845
+Epoch:128, compute loss cost:4.5259s, train loss:335.2809, val loss:1022.3036, test loss:5435.0757
+Evaluate cost:4.4213s, hr:0.3029, ndcg:0.1839
+Epoch:129, compute loss cost:4.5210s, train loss:335.1025, val loss:1024.8555, test loss:5444.6069
+Evaluate cost:4.6125s, hr:0.3031, ndcg:0.1836
+Epoch:130, compute loss cost:4.5344s, train loss:331.7620, val loss:1024.1527, test loss:5441.8164
+Evaluate cost:4.4477s, hr:0.3029, ndcg:0.1835
+Epoch:131, compute loss cost:4.5126s, train loss:332.3605, val loss:1026.9413, test loss:5454.9473
+Evaluate cost:4.4821s, hr:0.3040, ndcg:0.1840
+Epoch:132, compute loss cost:4.5274s, train loss:330.1721, val loss:1028.8250, test loss:5468.8257
+Evaluate cost:4.4343s, hr:0.3025, ndcg:0.1830
+Epoch:133, compute loss cost:4.5249s, train loss:327.6244, val loss:1031.3218, test loss:5485.3813
+Evaluate cost:4.4382s, hr:0.3032, ndcg:0.1833
+Epoch:134, compute loss cost:4.4996s, train loss:325.0719, val loss:1029.4390, test loss:5477.4414
+Evaluate cost:4.4439s, hr:0.3028, ndcg:0.1830
+Epoch:135, compute loss cost:4.5299s, train loss:325.3728, val loss:1032.8286, test loss:5495.1133
+Evaluate cost:4.4464s, hr:0.3031, ndcg:0.1831
+Epoch:136, compute loss cost:4.5274s, train loss:322.6733, val loss:1032.7224, test loss:5505.0186
+Evaluate cost:4.4173s, hr:0.3025, ndcg:0.1832
+Epoch:137, compute loss cost:4.5344s, train loss:319.6953, val loss:1034.7295, test loss:5511.0713
+Evaluate cost:4.4078s, hr:0.3023, ndcg:0.1827
+Epoch:138, compute loss cost:4.5259s, train loss:317.7786, val loss:1034.6223, test loss:5507.9482
+Evaluate cost:4.4374s, hr:0.3032, ndcg:0.1829
+Epoch:139, compute loss cost:4.5369s, train loss:315.4287, val loss:1036.2412, test loss:5518.4434
+Evaluate cost:4.4447s, hr:0.3011, ndcg:0.1816
+Epoch:140, compute loss cost:4.5154s, train loss:315.3040, val loss:1036.2825, test loss:5518.1758
+Evaluate cost:4.4464s, hr:0.3010, ndcg:0.1816
+Epoch:141, compute loss cost:4.5255s, train loss:312.7347, val loss:1041.2781, test loss:5546.1812
+Evaluate cost:4.4486s, hr:0.3022, ndcg:0.1820
+Epoch:142, compute loss cost:4.5359s, train loss:309.4763, val loss:1039.6475, test loss:5532.4219
+Evaluate cost:4.4262s, hr:0.3009, ndcg:0.1814
+Epoch:143, compute loss cost:4.5241s, train loss:306.9175, val loss:1042.9827, test loss:5555.0879
+Evaluate cost:4.4521s, hr:0.3012, ndcg:0.1817
+Epoch:144, compute loss cost:4.5060s, train loss:306.8569, val loss:1044.1351, test loss:5564.5312
+Evaluate cost:4.4377s, hr:0.3020, ndcg:0.1819
+Epoch:145, compute loss cost:4.5145s, train loss:307.1978, val loss:1045.5833, test loss:5571.6865
+Evaluate cost:4.4478s, hr:0.3013, ndcg:0.1811
+Epoch:146, compute loss cost:4.5299s, train loss:305.1316, val loss:1048.0105, test loss:5585.5283
+Evaluate cost:4.4834s, hr:0.3006, ndcg:0.1811
+Epoch:147, compute loss cost:4.5314s, train loss:300.9416, val loss:1047.9568, test loss:5583.0044
+Evaluate cost:4.4293s, hr:0.3005, ndcg:0.1812
+Epoch:148, compute loss cost:4.5144s, train loss:299.4273, val loss:1049.4834, test loss:5596.9019
+Evaluate cost:4.4299s, hr:0.3010, ndcg:0.1809
+Epoch:149, compute loss cost:4.5563s, train loss:297.7264, val loss:1052.1801, test loss:5607.2134
+Evaluate cost:4.4218s, hr:0.2996, ndcg:0.1803
+Epoch:150, compute loss cost:4.5125s, train loss:296.1661, val loss:1051.2913, test loss:5602.8823
+Evaluate cost:4.4328s, hr:0.3008, ndcg:0.1809
+Epoch:151, compute loss cost:4.5255s, train loss:295.2093, val loss:1053.5576, test loss:5614.6431
+Evaluate cost:4.4259s, hr:0.3009, ndcg:0.1807
+Epoch:152, compute loss cost:4.5264s, train loss:293.0169, val loss:1055.6682, test loss:5623.5317
+Evaluate cost:4.5863s, hr:0.2992, ndcg:0.1797
+Epoch:153, compute loss cost:4.5170s, train loss:292.1636, val loss:1059.0522, test loss:5641.9478
+Evaluate cost:4.4182s, hr:0.2984, ndcg:0.1794
+Epoch:154, compute loss cost:4.5259s, train loss:289.1669, val loss:1058.7479, test loss:5638.5444
+Evaluate cost:4.4367s, hr:0.2985, ndcg:0.1795
+Epoch:155, compute loss cost:4.5005s, train loss:289.6195, val loss:1061.3252, test loss:5658.3042
+Evaluate cost:4.4232s, hr:0.2963, ndcg:0.1783
+Epoch:156, compute loss cost:4.5339s, train loss:287.7015, val loss:1060.7749, test loss:5655.5449
+Evaluate cost:4.4618s, hr:0.2984, ndcg:0.1793
+Epoch:157, compute loss cost:4.5095s, train loss:287.2777, val loss:1064.5137, test loss:5676.9004
+Evaluate cost:4.4561s, hr:0.2969, ndcg:0.1786
+Epoch:158, compute loss cost:4.5349s, train loss:282.7321, val loss:1066.3129, test loss:5687.6787
+Evaluate cost:4.4403s, hr:0.2978, ndcg:0.1789
+Epoch:159, compute loss cost:4.5160s, train loss:282.0943, val loss:1067.3350, test loss:5694.9326
+Evaluate cost:4.4223s, hr:0.2953, ndcg:0.1781
+Epoch:160, compute loss cost:4.5279s, train loss:280.6740, val loss:1068.9417, test loss:5702.6724
+Evaluate cost:4.4148s, hr:0.2952, ndcg:0.1777
+Epoch:161, compute loss cost:4.5254s, train loss:278.6538, val loss:1069.4744, test loss:5710.2734
+Evaluate cost:4.4410s, hr:0.2961, ndcg:0.1775
+Epoch:162, compute loss cost:4.4920s, train loss:279.7509, val loss:1071.7463, test loss:5725.9375
+Evaluate cost:4.4481s, hr:0.2954, ndcg:0.1772
+Epoch:163, compute loss cost:4.5320s, train loss:273.7758, val loss:1072.3715, test loss:5726.4570
+Evaluate cost:4.4348s, hr:0.2946, ndcg:0.1774
+Epoch:164, compute loss cost:4.5558s, train loss:274.9652, val loss:1071.8241, test loss:5726.5059
+Evaluate cost:4.4398s, hr:0.2955, ndcg:0.1779
+Epoch:165, compute loss cost:4.4960s, train loss:275.4229, val loss:1075.2559, test loss:5744.5459
+Evaluate cost:4.4437s, hr:0.2946, ndcg:0.1774
+Epoch:166, compute loss cost:4.5249s, train loss:271.8718, val loss:1078.5676, test loss:5759.6528
+Evaluate cost:4.4392s, hr:0.2945, ndcg:0.1771
+Epoch:167, compute loss cost:4.5409s, train loss:271.0562, val loss:1078.1714, test loss:5762.6206
+Evaluate cost:4.4314s, hr:0.2948, ndcg:0.1770
+Epoch:168, compute loss cost:4.5204s, train loss:269.2321, val loss:1080.4507, test loss:5772.7061
+Evaluate cost:4.4437s, hr:0.2932, ndcg:0.1767
+Epoch:169, compute loss cost:4.5294s, train loss:267.5115, val loss:1080.6500, test loss:5777.0298
+Evaluate cost:4.4259s, hr:0.2935, ndcg:0.1770
+Epoch:170, compute loss cost:4.5314s, train loss:266.2803, val loss:1083.5020, test loss:5788.0659
+Evaluate cost:4.4477s, hr:0.2936, ndcg:0.1773
+Epoch:171, compute loss cost:4.4980s, train loss:264.8356, val loss:1085.0645, test loss:5793.8691
+Evaluate cost:4.4193s, hr:0.2930, ndcg:0.1766
+Epoch:172, compute loss cost:4.5404s, train loss:263.7310, val loss:1087.2650, test loss:5805.7275
+Evaluate cost:4.4482s, hr:0.2952, ndcg:0.1770
+Epoch:173, compute loss cost:4.5189s, train loss:262.6396, val loss:1087.8588, test loss:5810.1147
+Evaluate cost:4.4270s, hr:0.2934, ndcg:0.1766
+Epoch:174, compute loss cost:4.4925s, train loss:262.4883, val loss:1090.3523, test loss:5827.6875
+Evaluate cost:4.4303s, hr:0.2914, ndcg:0.1757
+Epoch:175, compute loss cost:4.5209s, train loss:259.2110, val loss:1089.3512, test loss:5820.9199
+Evaluate cost:4.5923s, hr:0.2929, ndcg:0.1763
+Epoch:176, compute loss cost:4.5089s, train loss:257.0661, val loss:1091.5338, test loss:5835.6943
+Evaluate cost:4.4130s, hr:0.2915, ndcg:0.1758
+Epoch:177, compute loss cost:4.5365s, train loss:257.2470, val loss:1094.1921, test loss:5845.5381
+Evaluate cost:4.4342s, hr:0.2918, ndcg:0.1757
+Epoch:178, compute loss cost:4.5185s, train loss:254.6819, val loss:1094.2786, test loss:5850.2832
+Evaluate cost:4.4222s, hr:0.2909, ndcg:0.1752
+Epoch:179, compute loss cost:4.5006s, train loss:252.9569, val loss:1095.5762, test loss:5854.9072
+Evaluate cost:4.4293s, hr:0.2912, ndcg:0.1754
+Epoch:180, compute loss cost:4.5279s, train loss:253.8372, val loss:1097.3328, test loss:5859.8662
+Evaluate cost:4.4248s, hr:0.2909, ndcg:0.1751
+Epoch:181, compute loss cost:4.5244s, train loss:250.6878, val loss:1096.9830, test loss:5860.3115
+Evaluate cost:4.4463s, hr:0.2909, ndcg:0.1752
+Epoch:182, compute loss cost:4.5175s, train loss:250.7671, val loss:1099.7946, test loss:5877.2681
+Evaluate cost:4.4354s, hr:0.2909, ndcg:0.1752
+Epoch:183, compute loss cost:4.5284s, train loss:249.3907, val loss:1102.5734, test loss:5895.8232
+Evaluate cost:4.4477s, hr:0.2885, ndcg:0.1745
+Epoch:184, compute loss cost:4.5713s, train loss:247.5160, val loss:1105.0654, test loss:5904.2607
+Evaluate cost:4.4366s, hr:0.2890, ndcg:0.1745
+Epoch:185, compute loss cost:4.5239s, train loss:246.0634, val loss:1106.8658, test loss:5916.9102
+Evaluate cost:5.8309s, hr:0.2884, ndcg:0.1739
+Epoch:186, compute loss cost:4.5574s, train loss:245.2966, val loss:1105.9061, test loss:5915.0601
+Evaluate cost:4.5028s, hr:0.2883, ndcg:0.1735
+Epoch:187, compute loss cost:4.5529s, train loss:244.2814, val loss:1109.2327, test loss:5932.9102
+Evaluate cost:4.4627s, hr:0.2883, ndcg:0.1730
+Epoch:188, compute loss cost:4.5369s, train loss:243.4459, val loss:1108.9431, test loss:5930.6748
+Evaluate cost:4.4225s, hr:0.2895, ndcg:0.1741
+Epoch:189, compute loss cost:4.5115s, train loss:243.0569, val loss:1110.9525, test loss:5941.7856
+Evaluate cost:4.4187s, hr:0.2900, ndcg:0.1744
+Epoch:190, compute loss cost:4.5384s, train loss:239.6645, val loss:1111.5729, test loss:5943.7529
+Evaluate cost:4.4103s, hr:0.2899, ndcg:0.1739
+Epoch:191, compute loss cost:4.5528s, train loss:239.8628, val loss:1117.1526, test loss:5977.4717
+Evaluate cost:4.4230s, hr:0.2882, ndcg:0.1735
+Epoch:192, compute loss cost:4.5473s, train loss:237.6621, val loss:1114.2799, test loss:5966.3774
+Evaluate cost:4.4369s, hr:0.2883, ndcg:0.1732
+Epoch:193, compute loss cost:4.5250s, train loss:236.8991, val loss:1115.9365, test loss:5972.8525
+Evaluate cost:4.4074s, hr:0.2880, ndcg:0.1730
+Epoch:194, compute loss cost:4.5115s, train loss:237.0038, val loss:1116.5439, test loss:5980.2451
+Evaluate cost:4.4116s, hr:0.2878, ndcg:0.1729
+Epoch:195, compute loss cost:4.5184s, train loss:237.0104, val loss:1122.3774, test loss:6000.6499
+Evaluate cost:4.4244s, hr:0.2871, ndcg:0.1726
+Epoch:196, compute loss cost:4.5409s, train loss:232.4579, val loss:1120.4155, test loss:5990.4321
+Evaluate cost:4.4102s, hr:0.2871, ndcg:0.1725
+Epoch:197, compute loss cost:4.5344s, train loss:235.4664, val loss:1123.1862, test loss:6005.0557
+Evaluate cost:4.4342s, hr:0.2874, ndcg:0.1732
+Epoch:198, compute loss cost:4.4970s, train loss:231.4974, val loss:1123.0586, test loss:6007.1548
+Evaluate cost:4.5805s, hr:0.2885, ndcg:0.1736
+Epoch:199, compute loss cost:4.5099s, train loss:230.7330, val loss:1124.9569, test loss:6020.0005
+Evaluate cost:4.4318s, hr:0.2887, ndcg:0.1729
+Epoch:200, compute loss cost:4.5314s, train loss:230.3877, val loss:1124.8566, test loss:6018.3486
+Evaluate cost:4.4263s, hr:0.2882, ndcg:0.1727
+Epoch:201, compute loss cost:4.5489s, train loss:228.4631, val loss:1125.4358, test loss:6024.3457
+Evaluate cost:4.4322s, hr:0.2869, ndcg:0.1721
+Epoch:202, compute loss cost:4.5220s, train loss:228.9076, val loss:1125.5083, test loss:6022.2705
+Evaluate cost:4.4149s, hr:0.2854, ndcg:0.1717
+Epoch:203, compute loss cost:4.4875s, train loss:226.9401, val loss:1129.3215, test loss:6043.8154
+Evaluate cost:4.4413s, hr:0.2841, ndcg:0.1706
+Epoch:204, compute loss cost:4.5079s, train loss:224.7393, val loss:1130.1194, test loss:6049.0186
+Evaluate cost:4.4284s, hr:0.2849, ndcg:0.1712
+Epoch:205, compute loss cost:4.5259s, train loss:226.0341, val loss:1130.9003, test loss:6051.1382
+Evaluate cost:4.4447s, hr:0.2845, ndcg:0.1712
+Epoch:206, compute loss cost:4.5255s, train loss:224.3761, val loss:1134.1737, test loss:6073.7129
+Evaluate cost:4.4587s, hr:0.2837, ndcg:0.1706
+Epoch:207, compute loss cost:4.5090s, train loss:222.5683, val loss:1132.0476, test loss:6062.7256
+Evaluate cost:4.4069s, hr:0.2840, ndcg:0.1707
+Epoch:208, compute loss cost:4.5384s, train loss:222.0471, val loss:1134.3252, test loss:6077.6133
+Evaluate cost:4.4912s, hr:0.2822, ndcg:0.1701
+Epoch:209, compute loss cost:4.5329s, train loss:220.3508, val loss:1134.9619, test loss:6083.7441
+Evaluate cost:4.4253s, hr:0.2831, ndcg:0.1701
+Epoch:210, compute loss cost:4.5409s, train loss:219.5035, val loss:1137.0229, test loss:6091.7568
+Evaluate cost:4.4177s, hr:0.2827, ndcg:0.1697
+Epoch:211, compute loss cost:4.5020s, train loss:219.4606, val loss:1137.6820, test loss:6097.3003
+Evaluate cost:4.6124s, hr:0.2832, ndcg:0.1699
+Epoch:212, compute loss cost:4.5354s, train loss:217.9844, val loss:1138.3812, test loss:6100.9365
+Evaluate cost:4.4177s, hr:0.2833, ndcg:0.1703
+Epoch:213, compute loss cost:4.5309s, train loss:215.6084, val loss:1139.2061, test loss:6104.6631
+Evaluate cost:4.4303s, hr:0.2840, ndcg:0.1699
+Epoch:214, compute loss cost:4.5349s, train loss:215.3911, val loss:1140.8423, test loss:6111.6152
+Evaluate cost:4.4307s, hr:0.2825, ndcg:0.1697
+Epoch:215, compute loss cost:4.5404s, train loss:215.1989, val loss:1141.5574, test loss:6115.0845
+Evaluate cost:4.4269s, hr:0.2818, ndcg:0.1695
+Epoch:216, compute loss cost:4.5134s, train loss:214.0992, val loss:1143.6770, test loss:6126.8955
+Evaluate cost:4.4352s, hr:0.2816, ndcg:0.1695
+Epoch:217, compute loss cost:4.5179s, train loss:213.4951, val loss:1145.6587, test loss:6137.0146
+Evaluate cost:4.4012s, hr:0.2806, ndcg:0.1691
+Epoch:218, compute loss cost:4.5309s, train loss:211.9336, val loss:1147.7505, test loss:6151.2954
+Evaluate cost:4.4209s, hr:0.2811, ndcg:0.1694
+Epoch:219, compute loss cost:4.5000s, train loss:211.4421, val loss:1147.2010, test loss:6148.2397
+Evaluate cost:4.4219s, hr:0.2834, ndcg:0.1698
+Epoch:220, compute loss cost:4.5274s, train loss:210.3228, val loss:1151.3228, test loss:6167.3511
+Evaluate cost:4.4103s, hr:0.2825, ndcg:0.1695
+Epoch:221, compute loss cost:4.5005s, train loss:208.2157, val loss:1151.9191, test loss:6171.1694
+Evaluate cost:4.6218s, hr:0.2824, ndcg:0.1691
+Epoch:222, compute loss cost:4.5384s, train loss:207.5724, val loss:1154.3555, test loss:6187.5229
+Evaluate cost:4.4544s, hr:0.2816, ndcg:0.1693
+Epoch:223, compute loss cost:4.5249s, train loss:208.0249, val loss:1156.2400, test loss:6195.7358
+Evaluate cost:4.4237s, hr:0.2793, ndcg:0.1686
+Epoch:224, compute loss cost:4.5435s, train loss:206.8036, val loss:1156.4167, test loss:6192.3003
+Evaluate cost:4.4410s, hr:0.2805, ndcg:0.1690
+Epoch:225, compute loss cost:4.5329s, train loss:205.3870, val loss:1157.6445, test loss:6199.5078
+Evaluate cost:4.4517s, hr:0.2817, ndcg:0.1694
+Epoch:226, compute loss cost:4.5434s, train loss:204.2041, val loss:1160.2153, test loss:6212.4287
+Evaluate cost:4.4192s, hr:0.2812, ndcg:0.1690
+Epoch:227, compute loss cost:4.5210s, train loss:204.4936, val loss:1163.2620, test loss:6226.8711
+Evaluate cost:4.4247s, hr:0.2821, ndcg:0.1693
+Epoch:228, compute loss cost:4.4935s, train loss:203.2104, val loss:1163.1630, test loss:6229.9771
+Evaluate cost:4.4397s, hr:0.2817, ndcg:0.1691
+Epoch:229, compute loss cost:4.5538s, train loss:202.6446, val loss:1164.9285, test loss:6237.6660
+Evaluate cost:4.4289s, hr:0.2806, ndcg:0.1691
+Epoch:230, compute loss cost:4.5050s, train loss:201.2308, val loss:1166.5586, test loss:6246.3027
+Evaluate cost:4.4502s, hr:0.2807, ndcg:0.1689
+Epoch:231, compute loss cost:4.5195s, train loss:201.7914, val loss:1169.0387, test loss:6264.8350
+Evaluate cost:4.4214s, hr:0.2790, ndcg:0.1681
+Epoch:232, compute loss cost:4.5364s, train loss:197.9683, val loss:1168.7146, test loss:6265.6406
+Evaluate cost:4.4293s, hr:0.2785, ndcg:0.1682
+Epoch:233, compute loss cost:4.5025s, train loss:197.9515, val loss:1171.1746, test loss:6282.4316
+Evaluate cost:4.4264s, hr:0.2778, ndcg:0.1671
+Epoch:234, compute loss cost:4.5209s, train loss:197.2730, val loss:1172.1555, test loss:6285.4531
+Evaluate cost:4.5793s, hr:0.2795, ndcg:0.1682
+Epoch:235, compute loss cost:4.5065s, train loss:196.4134, val loss:1174.8341, test loss:6299.2607
+Evaluate cost:4.4232s, hr:0.2796, ndcg:0.1679
+Epoch:236, compute loss cost:4.5109s, train loss:196.0827, val loss:1176.9705, test loss:6312.1611
+Evaluate cost:4.4901s, hr:0.2782, ndcg:0.1670
+Epoch:237, compute loss cost:4.6661s, train loss:196.3001, val loss:1179.4192, test loss:6327.0156
+Evaluate cost:4.4887s, hr:0.2793, ndcg:0.1673
+Epoch:238, compute loss cost:4.7599s, train loss:193.5791, val loss:1177.9717, test loss:6321.2607
+Evaluate cost:4.6283s, hr:0.2792, ndcg:0.1673
+Epoch:239, compute loss cost:4.8579s, train loss:192.9326, val loss:1180.0195, test loss:6332.7129
+Evaluate cost:4.6222s, hr:0.2790, ndcg:0.1672
+Epoch:240, compute loss cost:4.8500s, train loss:190.9909, val loss:1180.6235, test loss:6337.9229
+Evaluate cost:4.6358s, hr:0.2777, ndcg:0.1667
+Epoch:241, compute loss cost:5.4418s, train loss:190.3881, val loss:1182.6317, test loss:6346.4131
+Evaluate cost:4.8147s, hr:0.2767, ndcg:0.1663
+Epoch:242, compute loss cost:5.2050s, train loss:190.7280, val loss:1184.7971, test loss:6358.2456
+Evaluate cost:5.2155s, hr:0.2756, ndcg:0.1661
+Following will output the evaluation of the model:
+Epoch:1, compute loss cost:10.8540s, train loss:977.6637, val loss:933.3499, test loss:4791.2666
+Evaluate cost:8.7067s, hr:0.3321, ndcg:0.2002
+Following will output the evaluation of the model:
