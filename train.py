@@ -1,147 +1,170 @@
-'''
-    author: Peijie Sun
-    e-mail: sun.hfut@gmail.com 
-    released date: 04/18/2019
-'''
+#-*- coding: utf-8 -*-
+#author: Zhen Wu
 
-import os, sys, shutil
-
-from time import time
+import os, time, pickle
 import numpy as np
 import tensorflow as tf
 
-os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3' #ignore the warnings 
+from data_helpers import Dataset
+import data_helpers
+from model import HUAPA
 
-from Logging import Logging
 
-def start(conf, data, model, evaluate):
-    log_dir = os.path.join(os.getcwd(), 'log')
-    if not os.path.exists(log_dir):
-        os.makedirs(log_dir)
-    # define log name 
-    log_path = os.path.join(os.getcwd(), 'log/%s_%s.log' % (conf.data_name, conf.model_name))
+# Data loading params
+tf.flags.DEFINE_integer("n_class", 5, "Numbers of class")
+tf.flags.DEFINE_string("dataset", 'yelp13', "The dataset")
 
-    # start to prepare data for training and evaluating
-    data.initializeRankingHandle()
+# Model Hyperparameters
+tf.flags.DEFINE_integer("embedding_dim", 200, "Dimensionality of character embedding")
+tf.flags.DEFINE_integer("hidden_size", 100, "hidden_size of rnn")
+tf.flags.DEFINE_integer('max_sen_len', 50, 'max number of tokens per sentence')
+tf.flags.DEFINE_integer('max_doc_len', 40, 'max number of tokens per sentence')
+tf.flags.DEFINE_float("lr", 0.005, "Learning rate")
 
-    d_train, d_val, d_test, d_test_eva = data.train, data.val, data.test, data.test_eva
+# Training parameters
+tf.flags.DEFINE_integer("batch_size", 100, "Batch Size")
+tf.flags.DEFINE_integer("num_epochs", 1000, "Number of training epochs")
+tf.flags.DEFINE_integer("evaluate_every", 25, "Evaluate model on dev set after this many steps")
 
-    print('System start to load data...')
-    t0 = time()
-    d_train.initializeRankingTrain()
-    d_val.initializeRankingVT()
-    d_test.initializeRankingVT()
-    d_test_eva.initalizeRankingEva()
-    t1 = time()
-    print('Data has been loaded successfully, cost:%.4fs' % (t1 - t0))
+# Misc Parameters
+tf.flags.DEFINE_boolean("allow_soft_placement", True, "Allow device soft device placement")
+tf.flags.DEFINE_boolean("log_device_placement", False, "Log placement of ops on devices")
 
-    # prepare model necessary data.
-    data_dict = d_train.prepareModelSupplement(model)
-    model.inputSupply(data_dict)
-    model.startConstructGraph()
+FLAGS = tf.flags.FLAGS
+FLAGS._parse_flags()
+print("\nParameters:")
+for attr, value in sorted(FLAGS.__flags.items()):
+    print("{}={}".format(attr.upper(), value))
+print("")
 
-    # standard tensorflow running environment initialize
-    tf_conf = tf.ConfigProto()
-    os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3' 
-    tf_conf.gpu_options.allow_growth = True
-    sess = tf.Session(config=tf_conf)
-    sess.run(model.init)
 
-    if conf.pretrain_flag == 1:
-        model.saver.restore(sess, conf.pre_model)
+# Load data
+print("Loading data...")
+trainset = Dataset('data/'+FLAGS.dataset+'/train.ss')
+devset = Dataset('data/'+FLAGS.dataset+'/dev.ss')
+testset = Dataset('data/'+FLAGS.dataset+'/test.ss')
 
-    # set debug_flag=0, doesn't print any results
-    log = Logging(log_path)
-    print()
-    log.record('Following will output the evaluation of the model:')
+alldata = np.concatenate([trainset.t_docs, devset.t_docs, testset.t_docs], axis=0)
+embeddingpath = 'data/'+FLAGS.dataset+'/embedding.txt'
+embeddingfile, wordsdict = data_helpers.load_embedding(embeddingpath, alldata, FLAGS.embedding_dim)
+del alldata
+print("Loading data finished...")
 
-    # Start Training !!!
-    for epoch in range(1, conf.epochs+1):
-        # optimize model with training data and compute train loss
-        tmp_train_loss = []
-        t0 = time()
+usrdict, prddict = trainset.get_usr_prd_dict()
+trainbatches = trainset.batch_iter(usrdict, prddict, wordsdict, FLAGS.n_class, FLAGS.batch_size,
+                                 FLAGS.num_epochs, FLAGS.max_sen_len, FLAGS.max_doc_len)
+devset.genBatch(usrdict, prddict, wordsdict, FLAGS.batch_size,
+                  FLAGS.max_sen_len, FLAGS.max_doc_len, FLAGS.n_class)
+testset.genBatch(usrdict, prddict, wordsdict, FLAGS.batch_size,
+                  FLAGS.max_sen_len, FLAGS.max_doc_len, FLAGS.n_class)
 
-        #tmp_total_list = []
-        while d_train.terminal_flag:
-            d_train.getTrainRankingBatch()
-            d_train.linkedMap()
 
-            train_feed_dict = {}
-            for (key, value) in model.map_dict['train'].items():
-                train_feed_dict[key] = d_train.data_dict[value]
+with tf.Graph().as_default():
+    session_config = tf.ConfigProto(
+        allow_soft_placement=FLAGS.allow_soft_placement,
+        log_device_placement=FLAGS.log_device_placement
+    )
+    session_config.gpu_options.allow_growth = True
+    sess = tf.Session(config=session_config)
+    with sess.as_default():
+        huapa = HUAPA(
+            max_sen_len = FLAGS.max_sen_len,
+            max_doc_len = FLAGS.max_doc_len,
+            class_num = FLAGS.n_class,
+            embedding_file = embeddingfile,
+            embedding_dim = FLAGS.embedding_dim,
+            hidden_size = FLAGS.hidden_size,
+            user_num = len(usrdict),
+            product_num = len(prddict)
+        )
+        huapa.build_model()
+        # Define Training procedure
+        global_step = tf.Variable(0, name="global_step", trainable=False)
+        optimizer = tf.train.AdamOptimizer(FLAGS.lr)
+        grads_and_vars = optimizer.compute_gradients(huapa.loss)
+        train_op = optimizer.apply_gradients(grads_and_vars, global_step=global_step)
 
-            [sub_train_loss, _] = sess.run(\
-                [model.map_dict['out']['train'], model.opt], feed_dict=train_feed_dict)
-            tmp_train_loss.append(sub_train_loss)
-        train_loss = np.mean(tmp_train_loss)
-        t1 = time()
+        # Save dict
+        timestamp = str(int(time.time()))
+        checkpoint_dir = os.path.abspath("../checkpoints/"+FLAGS.dataset+"/"+timestamp)
+        checkpoint_prefix = os.path.join(checkpoint_dir, "model")
+        if not os.path.exists(checkpoint_dir):
+            os.makedirs(checkpoint_dir)
+        saver = tf.train.Saver(tf.global_variables(), max_to_keep=1)
+        with open(checkpoint_dir + "/wordsdict.txt", 'wb') as f:
+            pickle.dump(wordsdict, f)
+        with open(checkpoint_dir + "/usrdict.txt", 'wb') as f:
+            pickle.dump(usrdict, f)
+        with open(checkpoint_dir + "/prddict.txt", 'wb') as f:
+            pickle.dump(prddict, f)
 
-        # compute val loss and test loss
-        d_val.getVTRankingOneBatch()
-        d_val.linkedMap()
-        val_feed_dict = {}
-        for (key, value) in model.map_dict['val'].items():
-            val_feed_dict[key] = d_val.data_dict[value]
-        val_loss = sess.run(model.map_dict['out']['val'], feed_dict=val_feed_dict)
+        sess.run(tf.global_variables_initializer())
 
-        d_test.getVTRankingOneBatch()
-        d_test.linkedMap()
-        test_feed_dict = {}
-        for (key, value) in model.map_dict['test'].items():
-            test_feed_dict[key] = d_test.data_dict[value]
-        test_loss = sess.run(model.map_dict['out']['test'], feed_dict=test_feed_dict)
-        t2 = time()
+        def train_step(batch):
+            u, p, x, y, sen_len, doc_len = zip(*batch)
+            feed_dict = {
+                huapa.userid: u,
+                huapa.productid: p,
+                huapa.input_x: x,
+                huapa.input_y: y,
+                huapa.sen_len: sen_len,
+                huapa.doc_len: doc_len
+            }
+            _, step, loss, accuracy = sess.run(
+                [train_op, global_step, huapa.loss, huapa.accuracy],
+                feed_dict)
+            time_str = datetime.datetime.now().isoformat()
+            print("{}: step {}, loss {:g}, acc {:g}".format(time_str, step, loss, accuracy))
 
-        # start evaluate model performance, hr and ndcg
-        def getPositivePredictions():
-            d_test_eva.getEvaPositiveBatch()
-            d_test_eva.linkedRankingEvaMap()
-            eva_feed_dict = {}
-            for (key, value) in model.map_dict['eva'].items():
-                eva_feed_dict[key] = d_test_eva.data_dict[value]
-            positive_predictions = sess.run(
-                model.map_dict['out']['eva'],
-                feed_dict=eva_feed_dict
-            )
-            return positive_predictions
+        def predict_step(u, p, x, y, sen_len, doc_len, name=None):
+            feed_dict = {
+                huapa.userid: u,
+                huapa.productid: p,
+                huapa.input_x: x,
+                huapa.input_y: y,
+                huapa.sen_len: sen_len,
+                huapa.doc_len: doc_len
+            }
+            step, loss, accuracy, correct_num, mse = sess.run(
+                [global_step, huapa.loss, huapa.accuracy, huapa.correct_num, huapa.mse],
+                feed_dict)
+            return correct_num, accuracy, mse
 
-        def getNegativePredictions():
-            negative_predictions = {}
-            terminal_flag = 1
-            while terminal_flag:
-                batch_user_list, terminal_flag = d_test_eva.getEvaRankingBatch()
-                d_test_eva.linkedRankingEvaMap()
-                eva_feed_dict = {}
-                for (key, value) in model.map_dict['eva'].items():
-                    eva_feed_dict[key] = d_test_eva.data_dict[value]
-                index = 0
-                tmp_negative_predictions = np.reshape(
-                    sess.run(
-                        model.map_dict['out']['eva'],
-                        feed_dict=eva_feed_dict
-                    ),
-                    [-1, conf.num_evaluate])
-                for u in batch_user_list:
-                    negative_predictions[u] = tmp_negative_predictions[index]
-                    index = index + 1
-            return negative_predictions
+        def predict(dataset, name=None):
+            acc = 0
+            rmse = 0.
+            for i in xrange(dataset.epoch):
+                correct_num, _, mse = predict_step(dataset.usr[i], dataset.prd[i], dataset.docs[i],
+                                                   dataset.label[i], dataset.sen_len[i], dataset.doc_len[i], name)
+                acc += correct_num
+                rmse += mse
+            acc = acc * 1.0 / dataset.data_size
+            rmse = np.sqrt(rmse / dataset.data_size)
+            return acc, rmse
 
-        tt2 = time()
+        topacc = 0.
+        toprmse = 0.
+        better_dev_acc = 0.
+        predict_round = 0
 
-        index_dict = d_test_eva.eva_index_dict
-        positive_predictions = getPositivePredictions()
-        negative_predictions = getNegativePredictions()
+        # Training loop. For each batch...
+        for tr_batch in trainbatches:
+            train_step(tr_batch)
+            current_step = tf.train.global_step(sess, global_step)
+            if current_step % FLAGS.evaluate_every == 0:
+                predict_round += 1
+                print("\nEvaluation round %d:" % (predict_round))
 
-        d_test_eva.index = 0 # !!!important, prepare for new batch
-        hr, ndcg = evaluate.evaluateRankingPerformance(\
-            index_dict, positive_predictions, negative_predictions, conf.topk, conf.num_procs)
-        tt3 = time()
-                
-        # print log to console and log_file
-        log.record('Epoch:%d, compute loss cost:%.4fs, train loss:%.4f, val loss:%.4f, test loss:%.4f' % \
-            (epoch, (t2-t0), train_loss, val_loss, test_loss))
-        log.record('Evaluate cost:%.4fs, hr:%.4f, ndcg:%.4f' % ((tt3-tt2), hr, ndcg))
+                dev_acc, dev_rmse = predict(devset, name="dev")
+                print("dev_acc: %.4f    dev_RMSE: %.4f" % (dev_acc, dev_rmse))
+                test_acc, test_rmse = predict(testset, name="test")
+                print("test_acc: %.4f    test_RMSE: %.4f" % (test_acc, test_rmse))
 
-        ## reset train data pointer, and generate new negative data
-        d_train.generateTrainNegative()
-
+                # print topacc with best dev acc
+                if dev_acc >= better_dev_acc:
+                    better_dev_acc = dev_acc
+                    topacc = test_acc
+                    toprmse = test_rmse
+                    path = saver.save(sess, checkpoint_prefix, global_step=current_step)
+                    print("Saved model checkpoint to {}\n".format(path))
+                print("topacc: %.4f   RMSE: %.4f" % (topacc, toprmse))
